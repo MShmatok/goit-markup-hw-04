@@ -17,6 +17,9 @@
   --grey-light-bg-cl: #f4f4fd;
   --pressed-bg-cl: #404bbf;
   --btn-cl: #4d5ae5;
+  --icon-border-cl: #8e8f99;
+  --icon-grey: rgba(255, 255, 255, 0.1);
+  --icon-green: #31d0aa;
 
   /* Fonts */
   --primary-font: Roboto, sans-serif;
@@ -54,6 +57,7 @@ img {
 
 .link {
   text-decoration: none;
+  cursor: pointer;
 }
 .list {
   list-style: none;
@@ -185,6 +189,17 @@ img {
 .section-hero {
   padding-top: 188px;
   padding-bottom: 188px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: var(--secondary-bg-cl);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/hero-photo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero {
   background-color: var(--secondary-bg-cl);
@@ -224,6 +239,19 @@ img {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+
+.advantags-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 112px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+
+  background-color: var(--grey-light-bg-cl);
+}
 .advantags-list {
   display: flex;
   gap: 22px;
@@ -238,6 +266,7 @@ img {
   padding-bottom: 120px;
 }
 .product-title,
+.customers-title,
 .team-title {
   margin: 0 auto 72px;
 
@@ -274,6 +303,29 @@ img {
   margin-bottom: 8px;
 }
 
+.team-position {
+  margin-bottom: 8px;
+}
+.list-social-media {
+  display: flex;
+  gap: 24px;
+}
+.link-social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--logo-darck-cl);
+
+  fill: #ffffff;
+}
+.link-social-media:focus,
+.link-social-media:hover {
+  background-color: var(--pressed-bg-cl);
+}
+
 /*----------------- Footer ---------------------*/
 .section-footer {
   padding: 100px 0;
@@ -290,6 +342,74 @@ img {
   max-width: 264px;
 }
 
+/* ------------------ Customers ---------------- */
+.section-customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+.container {
+}
+.customers-title {
+}
+.customers-list {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.list {
+}
+.item {
+}
+.link-customers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 168px;
+  height: 88px;
+
+  border: 1px solid var(--icon-border-cl);
+  border-radius: 4px;
+  fill: var(--icon-border-cl);
+}
+
+.link-customers:focus,
+.link-customers:hover {
+  fill: var(--pressed-bg-cl);
+  border-color: var(--pressed-bg-cl);
+}
+.item-customers {
+}
+.icon {
+}
+.icon-customers {
+}
+/* ----------FOTER - ------------ */
+.footer-logo {
+  margin-right: 120px;
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+.social-title {
+  margin-bottom: 16px;
+  color: var(--light-txt-cl);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.link-social-media.footer {
+  fill: var(--logo-light-cl);
+  background-color: var(--icon-grey);
+}
+.link-social-media.footer:focus,
+.link-social-media.footer:hover {
+  background-color: var(--icon-green);
+}
+
 /*---------------- PORTFOLIO -------------------*/
 
 .btn.filter {
@@ -300,6 +420,9 @@ img {
 .btn.filter:focus {
   color: var(--light-txt-cl);
   background-color: var(--pressed-bg-cl);
+  border-color: transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .section-portfolio-hero {
@@ -331,6 +454,12 @@ img {
 
 .portfolio-item {
   background: var(--primary-bg-cl);
+}
+
+.portfolio-item:focus,
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card-set.portfolio-list {
